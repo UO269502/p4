@@ -1,0 +1,93 @@
+/*001*/
+body {
+    background-color: #ffffff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*001*/
+form {
+    color: white;
+    background-color: rgb(175, 172, 172);
+
+    width: max-content;
+
+    border-radius: 5%;
+
+    padding: 1.2em;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 2.5em);
+    grid-template-rows: repeat(9, 1.5em);
+    gap: 1em;
+}
+
+h2 {
+    color: rgb(230, 61, 230);
+    background-color: rgb(80, 77, 77);
+    grid-column-end: 5 span;
+    grid-row-end: 2 span;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Especificidad: 011*/
+input[type=submit] {
+    color: black;
+    background-color: white;
+    
+    border: none;
+    border-radius: 20%;
+
+    box-shadow: 0 0.2em black;
+}
+
+/*Especificidad: 021*/
+input[type=submit]:active {
+    box-shadow: none;
+}
+
+/*Especificidad: 011*/
+input[value="mrc"],
+input[value="m+"],
+input[value="m-"],
+input[value="-"],
+input[value="+"],
+input[value="÷"],
+input[value="×"],
+input[value="√"],
+input[value="CE"],
+input[value="C"],
+input[value="±"],
+input[value="%"]
+{
+    color: black;
+    background-color: #99fae5;
+}
+
+/*Especificidad: 011*/
+input[value="+"]
+{
+    grid-row-end: span 2;
+}
+
+/*Especificidad: 011*/
+input[type=text] {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+
+    color: black;
+    background-color: #ffffff;
+
+    text-align: center;
+    text-overflow: ellipsis;
+
+    grid-column-end: span 5;
+    grid-row-end: span 2;
+}
